@@ -32,7 +32,7 @@ namespace BookStore.Domain.Services
 			if (_bookRepository.Search(b => b.Name == book.Name).Result.Any())
 				return null;
 
-			await _bookRepository.Add(Book);
+			await _bookRepository.Add(book);
 			return book;
 		}
 

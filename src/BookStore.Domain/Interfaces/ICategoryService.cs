@@ -10,9 +10,9 @@ namespace BookStore.Domain.Interfaces
 	{
 		Task<IEnumerable<Category>> GetAll();
 		Task<Category> GetById(int id);
-		Task<Category> Add(int id);
+		Task<Category> Add(Category category);
 		Task<Category> Update(Category category);
-		Task<Category> Remove(Category category);
+		Task<bool> Remove(Category category);
 		Task<IEnumerable<Category>> Search(string categoryName);
 	}
 }
